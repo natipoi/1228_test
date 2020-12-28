@@ -113,13 +113,14 @@
   color: #999999;
 }
 
+/* 1228 追加 */
 .data-segment-text.blue > span:not(:first-child),
-.data-segment-text.blue {
+ .data-segment-text .blue {
   color: #5CB7CC;
 }
 
 .data-segment-text.red > span:not(:first-child),
-.data-segment-text.red {
+.data-segment-text .red {
   color: #DE4E4E;
 }
 
