@@ -1,0 +1,373 @@
+.section-panel {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.section-header > p {
+  font-size: 1rem;
+  color: #fff;
+  background: #4E6CDE;
+  padding: .25rem 1rem;
+  border-radius: 1.5rem;
+  margin-right: auto;
+}
+
+.section-header > span {
+  margin-right: .5rem;
+}
+
+.data-segment-boxs {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.data-segment-box,
+.data-segment-box-min {
+  position: relative;
+  border: 1px solid #ccc;
+  width: 200px;
+  margin-right: .5rem;
+}
+
+.data-segment-box-min.l {
+  margin-left: auto;
+}
+
+.data-segment-box-min {
+  width: 150px;
+}
+
+.data-segment-box-min > .data-segment-top,
+.data-segment-box-min > .data-segment-main > .data-segment-text {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.data-segment-box-min > .data-segment-top > span:first-child,
+.data-segment-box-min > .data-segment-main > .data-segment-text:first-child  > span:first-child {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.data-segment-header {
+  position: relative;
+  background: #FAFAFA;
+  text-align: left;
+  font-size: .8rem;
+  padding: .1rem .4rem;
+  border-bottom: 1px solid #CCCCCC;
+  font-weight: bold;
+}
+
+.data-segment-top {
+  display: flex;
+  align-items: center;
+  padding: .2rem .4rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.data-segment-top > span {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.data-segment-top > span:first-child {
+  margin-right: auto;
+}
+
+.data-segment-top > span:not(:first-child),
+.data-segment-text > span:not(:first-child) {
+  margin-left: .2rem;
+}
+
+.data-segment-main {
+  padding: .2rem .4rem;
+}
+
+.data-segment-text {
+  font-size: .8rem;
+  display: flex;
+  color: #333333;
+}
+
+.data-segment-text > span:first-child {
+  margin-right: auto;
+}
+
+.data-segment-text.inline > span:first-child {
+  margin-right: 0;
+  margin-left: auto;
+  color: #999999;
+}
+
+.data-segment-text.blue > span:not(:first-child),
+.data-segment-text.blue {
+  color: #5CB7CC;
+}
+
+.data-segment-text.red > span:not(:first-child),
+.data-segment-text.red {
+  color: #DE4E4E;
+}
+
+.chart {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.analytics1 {
+  position: relative;
+  width: 70% !important;
+}
+
+.graf1 {
+  position: relative;
+  width: 30% !important;
+}
+
+.items-box {
+  position: relative;
+  text-align: left;
+}
+
+.items-box > p {
+  font-weight: bold;
+}
+
+.items-box > .scroll-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #f1f1f1;
+  width: 50%;
+}
+
+.item.red {
+  background: #FFEBEB;
+}
+
+.item > img:first-child {
+  width: 120px;
+  margin-right: .5rem;
+}
+
+.item > img:last-child {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.item-text {
+  padding: .5rem 0;
+  color: #333333;
+}
+
+.item-text > p {
+  font-weight: bold;
+}
+
+.item-text > p:last-child > span {
+  margin-left: .5rem;
+}
+
+.item-text > p > span {
+  font-weight: normal;
+}
+
+.item-text > p > span.red {
+  color: #DE4E4E;
+}
+
+.item-text > p > span.red ~ img {
+  margin-left: .5rem;
+}
+
+.customer-analysis-boxs {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.customer-analysis-box {
+  position: relative;
+  width: 32%;
+  text-align: left;
+}
+
+.customer-analysis-box > p {
+  font-weight: bold;
+}
+
+.customer-analysis-header {
+  background: #FAFAFA;
+  padding:1.2rem 1rem;
+  display: flex;
+  text-align: left;
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.customer-analysis-header > img {
+  margin-right: 1rem;
+}
+
+.customer-analysis-header > .text > p > span {
+  margin-right: 1rem;
+}
+
+.customer-analysis-content {
+  position: relative;
+  background: #FAFAFA;
+  padding: .5rem 1rem;
+  border-top: 2px solid #fff;
+}
+
+.customer-analysis-content > .scroll-box {
+  height: 250px;
+}
+
+.customer-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #707070;
+}
+
+.customer-item > img {
+  margin-right: .5rem;
+}
+
+.customer-item > img:last-child {
+  margin-left: 1rem;
+}
+
+.customer-item > p {
+  font-weight: bold;
+}
+
+.section-panel.customer-analysis {
+  display: flex;
+  justify-content: space-around;
+}
+
+.customer-analysis-table-box {
+  text-align: left;
+}
+
+.customer-analysis-table-box:first-child {
+  width: 28%;
+}
+
+.customer-analysis-table-box:last-child {
+  width: 70%;
+}
+
+.customer-analysis-table-box > p {
+  font-weight: bold;
+}
+
+.customer-analysis-table {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.customer-analysis-table-header {
+  position: relative;
+  display: flex;
+  background: #FAFAFA;
+  padding: .25rem 1rem;
+}
+
+.customer-analysis-table-header.two > p:first-child {
+  margin-left: 1.5rem;
+  margin-right: auto;
+}
+
+.customer-analysis-table-header.five > p:nth-of-type(1) {
+  margin-left: 1.5rem;
+  width: 20%;
+}
+
+.customer-analysis-table-header.five > p:nth-of-type(2) {
+  width: 20%;
+  margin-right: auto;
+}
+
+.customer-analysis-table-header.five > p:nth-of-type(3) {
+  width: 30%;
+}
+
+.customer-analysis-table-content {
+  position: relative;
+}
+
+.customer-analysis-table-content > li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: .25rem 1rem .25rem .5rem;
+}
+
+.customer-analysis-table-content > li > span {
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  text-align: center;
+}
+
+.customer-analysis-table-content > li > img {
+  position: relative;
+  height: 1.5rem;
+  margin-right: .5rem;
+}
+
+.customer-analysis-table-content > li > p {
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.customer-analysis-table-content.five > li > p:nth-of-type(1) {
+  width: 20%;
+}
+
+.customer-analysis-table-content.five > li > p:nth-of-type(2) {
+  margin-right: auto;
+}
+
+.customer-analysis-table-content > li > p.wrap {
+  margin-left: auto;
+  line-height: 1;
+  text-align: right;
+}
+
+.customer-analysis-table-content > li > p.wrap > span {
+  font-weight: normal;
+  font-size: .7rem;
+  color: #999999;
+}
+
+

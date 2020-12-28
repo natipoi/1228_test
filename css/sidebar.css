@@ -1,0 +1,41 @@
+#sidebar {
+  position: relative;
+  width: 20%;
+  min-height: 100vh;
+  background: #3b3b3d;
+}
+
+#sidebar > ul {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #4d4d4f;
+  text-align: left;
+}
+
+#sidebar > ul > li {
+  font-weight: bold;
+}
+
+#sidebar > ul > li:first-child {
+  padding: 1rem .5rem;
+  background: #506edb;
+}
+
+#sidebar > ul > li:first-child > a > img {
+  width: 1.5rem;
+  margin-right: .5rem;
+}
+
+#sidebar > ul > li:not(:first-child) {
+  padding: 1rem 1rem 1rem 2.5rem;
+}
+
+#sidebar > ul > li:not(:first-child) > a {
+  display: flex;
+  align-items: center;
+}
+
+#sidebar > ul > li:not(:first-child) > a > img {
+  margin-left: auto;
+}

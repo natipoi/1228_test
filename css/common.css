@@ -1,0 +1,81 @@
+.toggle-switch > input {
+  display: none;
+}
+
+.toggle-switch > label {
+  display: block;
+  position: relative;
+  width: 2.5rem;
+  height: 1.2rem;
+  border-radius: 1.2rem;
+  background-color: #CCCCCC;
+  cursor: pointer;
+}
+
+.toggle-switch > input:checked+label {
+  background-color: #4E6CDE;
+}
+
+.toggle-switch > label::before {
+  position: absolute;
+  top: 0.05rem;
+  left: 0.05rem;
+  width: calc(1.2rem - 0.1rem);
+  height: calc(1.2rem - 0.1rem);
+  border-radius: calc(1.2rem - 0.1rem);
+  background-color: #fff;
+  transition: 0.5s;
+  content: "";
+}
+
+.toggle-switch > input:checked+label::before {
+  left: calc(100% - 1.2rem + 0.05rem);
+}
+
+.alert {
+  position: relative;
+  width: 100%;
+  background: #FFEB96;
+  display: flex;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.alert > img {
+  margin-right: 1rem;
+}
+
+.alert > p {
+  color: #DE4E4E;
+  text-decoration:underline;
+  margin-right: auto;
+}
+
+.alert > ion-icon {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.scroll-box {
+  position: relative;
+  height: 400px;
+  overflow: scroll;
+}
+
+.btn-w {
+  position: relative;
+  display: block;
+  padding: .8rem;
+  background: #4E6CDE;
+  margin: 2rem;
+  font-weight: bold;
+}
+
+.badge {
+  position: relative;
+  margin-left: auto;
+  background: #DE4E4E; 
+  border-radius: 1rem;
+  font-size: .8rem;
+  padding: .1rem .25rem;
+}
