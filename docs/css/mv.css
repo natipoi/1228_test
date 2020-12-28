@@ -209,6 +209,8 @@
   overflow-x: hidden;
   overflow-y: scroll;
   zoom: 1;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .mv-items-content01 {
@@ -258,6 +260,8 @@
   top: 0px;
   bottom: 0px;
   right: 0;
+  /* 1228 追加 */
+  font-style: normal;
 }
 
 .health .mv-items-content-alert {
@@ -289,6 +293,8 @@
   position: absolute;
   top: 12px;
   right: 0;
+  /* 1228 追加 */
+  font-style: normal;
 }
 
 .health .mv-items-content-alert a {
@@ -354,6 +360,8 @@
   height: 24px;
   right: 0;
   color: #666;
+  /* 1228 追加 */
+  font-style: normal;
 }
 
 .health .mv-items-content-alertLink::after {

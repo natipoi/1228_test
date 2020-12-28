@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "1228_test",
+			"path": "../.."
+		},
+		{
+			"name": "css",
+			"path": "../../../../../Downloads/dmm-makeshop-dashboard_1228/css"
+		},
+		{
+			"name": "img",
+			"path": "../../../../../Downloads/dmm-makeshop-dashboard_1228/img"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "1228_test"
+	}
+}

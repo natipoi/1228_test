@@ -29,7 +29,6 @@
 .data-segment-boxs {
   position: relative;
   display: flex;
-  align-items: flex-start;
   justify-content: flex-start;
 }
 
@@ -337,6 +336,9 @@
   display: inline-block;
   width: 2rem;
   text-align: center;
+  /*  1228 追加  */
+  margin-right: 5px;
+  z-index: 1;
 }
 
 .customer-analysis-table-content > li > img {
@@ -370,4 +372,45 @@
   color: #999999;
 }
 
+/* 12/28 追加 */
+.customer-analysis-header span.red {color: red;}
 
+.customer-analysis-table-content li span:first-child:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -1px;
+  right: -1px;
+  bottom: 0px;
+  z-index: -1;
+}
+.customer-analysis-table-content li:first-child span:first-child:before {
+  background: url("../img/icon_1.png") no-repeat center center/auto 100%;
+}
+.customer-analysis-table-content li:nth-child(2) span:first-child:before {
+background: url("../img/icon_2.png") no-repeat center center/auto 100%;
+}
+.customer-analysis-table-content li:nth-child(3) span:first-child:before {
+background: url("../img/icon_3.png") no-repeat center center/auto 100%;
+}
+
+
+
+.section-panel .wrap {
+  position: relative;
+  padding-left: 30px;
+}
+.section-panel .alertLink::before, .section-panel .musicLink::before {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  right: calc(100% - 20px);
+  transform: translateY(-50%);
+  background: url(../img/icon_alert.png) no-repeat center center/cover;
+  content: "";
+}
+
+.section-panel .musicLink::before {
+  background: url(../img/icon_music.png) no-repeat center center/cover;
+}

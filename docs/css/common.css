@@ -79,3 +79,19 @@
   font-size: .8rem;
   padding: .1rem .25rem;
 }
+/* 1228 追加 */
+.header {position: fixed;top:0;left:0; right:0; z-index: 1000;}
+.header-top-wrap {background: #506edb;padding: 0 30px;}
+.header-top {display: flex;height: 50px;line-height: 50px;max-width: 1500px;margin: 0 auto;}
+.header-right-contents {display: flex;margin-left: auto;}
+.header-right-contents > div {position: relative; margin-left: 20px;min-width: 30px;}
+.header-right-contents > div > a {display: block;position:relative;}
+.header-right-image-wrap a { position: absolute; left:0; top: 50%; transform: translateY(-50%);width: 30px; height: 30px; background: #fff; border-radius: 50%; background: url(../img/icon_sample.png) no-repeat center center/100% auto;}
+.header-logo {margin-right: 20px;}
+.header-shopLink a {background-color: #1b3491; padding: 10px 10px;font-weight: 900;border-radius: 3px;}
+
+.header-bottom-list {display: flex;justify-content: center;}
+.header-bottom-wrap {padding: 10px 0;border-bottom: solid 2px #cecece;background: #fafafa;}
+.header-bottom-list li {margin: 0 9px;}
+.header-bottom-list img {margin-bottom: 5px;}
+.header-bottom-list a {color: unset;font-size: 0.9rem;font-weight: 900;}

@@ -2,4 +2,6 @@
   position: relative;
   display: flex;
   width: 100%;
+  /* 1228 追加 */
+  padding-top: 122px;
 }
