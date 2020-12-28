@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/main-content.css">
+  <link rel="stylesheet" href="css/section-panel.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/mv.css">
+  <title>ダッシュボード</title>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+
+<body>
+  <section id="main">
+    <div id="sidebar">
+      <ul>
+        <li>
+          <a href="#"><img src="img/icon_magnet.png">集客改善(ダッシュボード)</a>
+        </li>
+        <li>
+          <a href="#earnings">売上</a>
+        </li>
+        <li>
+          <a href="#analytics">アクセス解析</a>
+        </li>
+        <li>
+          <a href="#sales">商品別売上</a>
+        </li>
+        <li>
+          <a href="#sales-analytics">購入者分析</a>
+        </li>
+        <li>
+          <a href="#">ショップヘルスチェック<span class="badge">99</span></a>
+        </li>
+        <li>
+          <a href="#">大手サイトに一括出品<img src="img/icon_target.png"></a>
+        </li>
+        <li>
+          <a href="#">広告出稿<img src="img/icon_target.png"></a>
+        </li>
+        <li>
+          <a href="#">メールでリピーター対策<img src="img/icon_target.png"></a>
+        </li>
+        <li>
+          <a href="#">【PR】○○で○○<img src="img/icon_target.png"></a>
+        </li>
+      </ul>
+      <div class="ad"></div>
+    </div>
+    <div id="main-content">
+      <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/">
+            <span itemprop="name">ホーム</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#">
+            <span itemprop="name">集客改善</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ul>
+      <div class="toolbar">
+        <p>データ絞り込み</p>
+        <div class="date-control">
+          <div id="date-picker">
+            <span>期間</span>
+            <a href="#" onclick="openModal()">2020年10月1日 - 2020年10月7日</a>
+            <span>比較</span>
+            <a href="#" onclick="openModal()">1ヶ月前</a>
+          </div>
+          <div class="picker-item">
+            <ion-icon name="close-outline"></ion-icon>
+            <a href="#" onclick="openModal()">アパレル</a>
+          </div>
+          <div class="picker-item">
+            <ion-icon name="close-outline"></ion-icon>
+            <a href="#" onclick="openModal()">アイテムポスト</a>
+          </div>
+        </div>
+        <div class="date-toggle">
+          <input type="radio" name="date-toggle" id="day" checked>
+          <label for="day">日別</label>
+          <input type="radio" name="date-toggle" id="month">
+          <label for="month">月別</label>
+          <input type="radio" name="date-toggle" id="year">
+          <label for="year">年別</label>
+        </div>
+        <p>レポート</p>
+        <div class="export-box">
+          <span>出力</span>
+          <a href="#">CSV</a>
+        </div>
+      </div>
+      <div class="mv-items">
+        <div class="mv-items-content health">
+          <div class="mv-items-content-alert">
+            <p class="mv-items-content-alertLink">
+              <a href="#">【アパレル】カテゴリで来訪者の数がnn%さがっています。</a>
+              <span>以下のような集客体制の強化が必要です。</span>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">掲載料・固定費無料で大手サイトにも出品する</a>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">初期費用無料・月額費用無料の広告を出して集客する</a>
+            </p>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert">
+            <p class="mv-items-content-alertLink">
+              <a href="#">先週に比べてリピーター数がn%さがっています。</a>
+              <span>以下の対策を行うことで<b>178,808円</b>の売上効果の改善が期待できます。</span>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">掲載料・固定費無料で大手サイトにも出品する</a>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">初期費用無料・月額費用無料の広告を出して集客する</a>
+            </p>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert">
+            <p class="mv-items-content-alertLink">
+              <a href="#">在庫切れの売れ行き商品が4点あります。</a>
+              <span>急ぎ在庫の追加を行いましょう。</span>
+            </p>
+            <div class="mv-item-content-alertItems">
+              <img src="img/item-sample.png">
+              <p class="mv-item-content-alertItemsTitle">
+                シンプルなのに収納力抜群！スクエア型の上品ト...
+                <span>在庫 0/55</span>
+              </p>
+              <p class="mv-item-content-alertItemsCodes">
+                商品コード：Y92-11-06-10 価格：16,280円（税込）
+              </p>
+            </div>
+            <div class="mv-item-content-alertItems">
+              <img src="img/item-sample.png">
+              <p class="mv-item-content-alertItemsTitle">
+                シンプルなのに収納力抜群！スクエア型の上品ト...
+                <span>在庫 0/55</span>
+              </p>
+              <p class="mv-item-content-alertItemsCodes">
+                商品コード：Y92-11-06-10 価格：16,280円（税込）
+              </p>
+            </div>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert music">
+            <p class="mv-items-content-alertLink">
+              <a href="#">購入者数が¥1,000以上、上昇しているキーワードがあります。</a>
+              <span>トレンドを逃さず、広告や販路拡大でさらに売上アップを狙いましょう。</span>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">掲載料・固定費無料で大手サイトにも出品する</a>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">初期費用無料・月額費用無料の広告を出して集客する</a>
+            </p>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert">
+            <p class="mv-items-content-alertLink">
+              <a href="#">【アパレル】カテゴリで来訪者の数がnn%さがっています。</a>
+              <span>以下のような集客体制の強化が必要です。</span>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">掲載料・固定費無料で大手サイトにも出品する</a>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">初期費用無料・月額費用無料の広告を出して集客する</a>
+            </p>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert">
+            <p class="mv-items-content-alertLink">
+              <a href="#">先週に比べてリピーター数がn%さがっています。</a>
+              <span>以下の対策を行うことで<b>178,808円</b>の売上効果の改善が期待できます。</span>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">掲載料・固定費無料で大手サイトにも出品する</a>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">初期費用無料・月額費用無料の広告を出して集客する</a>
+            </p>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert">
+            <p class="mv-items-content-alertLink">
+              <a href="#">在庫切れの売れ行き商品が4点あります。</a>
+              <span>急ぎ在庫の追加を行いましょう。</span>
+            </p>
+            <div class="mv-item-content-alertItems">
+              <img src="img/item-sample.png">
+              <p class="mv-item-content-alertItemsTitle">
+                シンプルなのに収納力抜群！スクエア型の上品ト...
+                <span>在庫 0/55</span>
+              </p>
+              <p class="mv-item-content-alertItemsCodes">
+                商品コード：Y92-11-06-10 価格：16,280円（税込）
+              </p>
+            </div>
+            <div class="mv-item-content-alertItems">
+              <img src="img/item-sample.png">
+              <p class="mv-item-content-alertItemsTitle">
+                シンプルなのに収納力抜群！スクエア型の上品ト...
+                <span>在庫 0/55</span>
+              </p>
+              <p class="mv-item-content-alertItemsCodes">
+                商品コード：Y92-11-06-10 価格：16,280円（税込）
+              </p>
+            </div>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert music">
+            <p class="mv-items-content-alertLink">
+              <a href="#">購入者数が¥1,000以上、上昇しているキーワードがあります。</a>
+              <span>トレンドを逃さず、広告や販路拡大でさらに売上アップを狙いましょう。</span>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">掲載料・固定費無料で大手サイトにも出品する</a>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">初期費用無料・月額費用無料の広告を出して集客する</a>
+            </p>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert music">
+            <p class="mv-items-content-alertLink">
+              <a href="#">購入者数が¥1,000以上、上昇しているキーワードがあります。</a>
+              <span>トレンドを逃さず、広告や販路拡大でさらに売上アップを狙いましょう。</span>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">掲載料・固定費無料で大手サイトにも出品する</a>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">初期費用無料・月額費用無料の広告を出して集客する</a>
+            </p>
+            <i class="close">✕</i>
+          </div>
+          <div class="mv-items-content-alert">
+            <p class="mv-items-content-alertLink">
+              <a href="#">【アパレル】カテゴリで来訪者の数がnn%さがっています。</a>
+              <span>以下のような集客体制の強化が必要です。</span>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">掲載料・固定費無料で大手サイトにも出品する</a>
+            </p>
+            <p class="mv-item-content-alertChecks">
+              <a href="#">初期費用無料・月額費用無料の広告を出して集客する</a>
+            </p>
+            <i class="close">✕</i>
+          </div>
+        </div>
+      </div>
+      <div class="mv-pager">
+        <ul>
+          <li>
+            1
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">4</a>
+          </li>
+          <li>
+            <a href="#">5</a>
+          </li>
+          <li>
+            <a href="#">6</a>
+          </li>
+          <li>
+            <a href="#">7</a>
+          </li>
+          <li>
+            <a href="#">8</a>
+          </li>
+          <li>
+            <a href="#">9</a>
+          </li>
+          <li>
+            <a href="#">&gt;</a>
+          </li>
+          <li>
+            <a href="#">|&gt;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
