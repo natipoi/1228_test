@@ -22,8 +22,15 @@
   <style>
     .chartjs-tooltip {width: 100px; height: 100px;background: #000;}
     .analytics1 {position: relative;}
-    .header-logo img {vertical-align: middle; }
-    .header-bottom-list .nav-icon {color: #cecece; font-size: 30px;width: 28px;}
+    .data-segment-top {position: relative;}
+    .data-segment-top::before {content:"";position: absolute;left: 5px;right: 5px;bottom:0;height: 1px;border-bottom: dashed 1px #ccc;}
+    .data-segment-title {position:relative; padding-left: 16px;}
+    .data-segment-title:before {content:"";position: absolute;left:0;top: 50%;transform: translateY(-50%); width:13px;height: 13px;border-radius: 50%;}
+    .data-segment-title__repeater:before {background-color: #f8bb45;}
+    .data-segment-title__repeaterBefore:before {background-color: #e0d1b5;}
+    .data-segment-title__new:before {background-color: #a7e3a2;}
+    .data-segment-title__newBefore:before {background-color:#d9e5d8;}
+    
 
 
   </style>
@@ -227,42 +234,64 @@
           </div>
           <div class="data-segment-box">
             <p class="data-segment-header">
-              総売上
+              リピーター
             </p>
             <p class="data-segment-top">
-              <span>期間</span>
+              <span class="data-segment-title data-segment-title__repeater">期間</span>
               ¥700,000
               <span>24位</span>
             </p>
             <div class="data-segment-main">
               <p class="data-segment-text">
-                <span>1ヶ月前</span>
-                ¥800,000
+                <span class="data-segment-title data-segment-title__repeaterBefore">1ヶ月前</span>
+                ¥600,000
+                <span>25位</span>
+              </p>
+              <p class="data-segment-text inline blue">
+                <span>比較 : </span>
+                +¥100,000
+                <span>+1位</span>
+              </p>
+            </div>
+          </div>
+          <div class="data-segment-box">
+            <p class="data-segment-header">
+              新規
+            </p>
+            <p class="data-segment-top">
+              <span class="data-segment-title data-segment-title__new">期間</span>
+              ¥300,000
+              <span>25位</span>
+            </p>
+            <div class="data-segment-main">
+              <p class="data-segment-text">
+                <span class="data-segment-title data-segment-title__newBefore">1ヶ月前</span>
+                ¥400,000
                 <span>22位</span>
               </p>
               <p class="data-segment-text inline red">
                 <span>比較 : </span>
-                +¥400,000
-                <span>+4位</span>
+                -¥100,000
+                <span>-3位</span>
               </p>
             </div>
           </div>
           <div class="data-segment-box-min l">
             <p class="data-segment-header">
-              総売上
+              リピーター
             </p>
             <p class="data-segment-top">
-              <span>当月</span>
+              <span class="data-segment-title data-segment-title__repeater">当月</span>
               70%
               <span>24位</span>
             </p>
             <div class="data-segment-main">
               <p class="data-segment-text">
-                <span>1ヶ月前</span>
+                <span class="data-segment-title data-segment-title__repeaterBefore">1ヶ月前</span>
                 65%
                 <span>25位</span>
               </p>
-              <p class="data-segment-text inline red">
+              <p class="data-segment-text inline blue">
                 <span>比較 : </span>
                 +5%
                 <span>+4位</span>
@@ -271,23 +300,23 @@
           </div>
           <div class="data-segment-box-min">
             <p class="data-segment-header">
-              総売上
+              新規
             </p>
             <p class="data-segment-top">
-              <span>当月</span>
-              70%
-              <span>24位</span>
+              <span class="data-segment-title data-segment-title__new">当月</span>
+              30%
+              <span>22位</span>
             </p>
             <div class="data-segment-main">
               <p class="data-segment-text">
-                <span>1ヶ月前</span>
-                65%
-                <span>25位</span>
+                <span class="data-segment-title data-segment-title__newBefore">1ヶ月前</span>
+                25%
+                <span>22位</span>
               </p>
               <p class="data-segment-text inline blue">
                 <span>比較 : </span>
                 +5%
-                <span>+4位</span>
+                <span>-位</span>
               </p>
             </div>
           </div>
