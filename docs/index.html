@@ -391,7 +391,7 @@
 
         </div>
         <div class="chart">
-          <div class="analytics1">
+          <div class="analytics2">
             <canvas id="analytics2" height="250px"></canvas>
           </div>
           <div class="graf1">
@@ -1407,73 +1407,79 @@
     }
   });
   
-  var dataNum = chart1.config.data.labels.length
-  var xPosiList = []
-  
-  for(var i=0; i < 1; i++) {
-    var meta = chart1.getDatasetMeta(i)
-    var data = meta.data
-    var x = 0;
-    for(var k=0; k<data.length; k++){
-      xPosiList.push(Math.round(data[k]["_model"].x))
-    }
-    var x = meta;
-  }
-  console.log(xPosiList)
-  var customPopup = false;
-  var tooltipEl = document.createElement('div');
-  chart1.options.onHover = function(evt) {
-    // console.log(evt.layerX);
+  const chart1_dataNum = chart1.config.data.labels.length
+  showCustomPopup(chart1_dataNum, chart1, "analytics1");
+
+  const chart3_dataNum = chart3.config.data.labels.length
+  showCustomPopup(chart3_dataNum, chart3, "analytics2");
+
+  function showCustomPopup(dataNum, chart, analytics){
+    var xPosiList = []
     
-    if(xPosiList.includes(evt.layerX)){
-      if( !customPopup ) {
-        console.log(evt)
-        customPopup = true
-        tooltipEl.classList = 'chartjs-tooltip';
-        tooltipEl.innerHTML =   `<div class="analytics1-popup">
-    <div class="popup-inner">
-      <div class="popup-heading">
-        <p class="popup-title">2020年11月17日（火）</p>
-        <p class="popup-subtxt">比較：1ヶ月前2020年10月17日（土）</p>
-      </div>
-      <div class="popup-result-list">
-        <div class="popup-result-item">
-          <p class="popup-result-item-label">売上</p>
-          <div class="popup-result-item-data">
-            <p class="popup-result-item-price">¥100,000</p>
-            <p class="popup-result-item-price-small">¥100,000</p>
-            <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
-          </div>
-        </div>
-        <div class="popup-result-item">
-          <p class="popup-result-item-label">リピーター</p>
-          <div class="popup-result-item-data">
-            <p class="popup-result-item-price">¥100,000</p>
-            <p class="popup-result-item-price-small">¥100,000</p>
-            <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
-          </div>
-        </div>
-        <div class="popup-result-item">
-          <p class="popup-result-item-label">新規</p>
-          <div class="popup-result-item-data">
-            <p class="popup-result-item-price">¥100,000</p>
-            <p class="popup-result-item-price-small">¥100,000</p>
-            <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
-          </div>
-        </div>
-      </div>
-    </div>`;
-        tooltipEl.style.top = `${evt.layerY}px`
-        tooltipEl.style.right = `calc(100% - ${evt.layerX}px)`
-        tooltipEl.style.position = "absolute";
-        console.log(tooltipEl.clientWidth)
-        document.getElementsByClassName('analytics1')[0].appendChild(tooltipEl);
+    for(var i=0; i < 1; i++) {
+      var meta = chart.getDatasetMeta(i)
+      var data = meta.data
+      var x = 0;
+      for(var k=0; k<data.length; k++){
+        xPosiList.push(Math.round(data[k]["_model"].x))
       }
-    } else if(customPopup) {
-      customPopup = false
-      document.getElementsByClassName('analytics1')[0].removeChild(tooltipEl)
+      var x = meta;
     }
-  };
+    var customPopup = false;
+    var tooltipEl = document.createElement('div');
+    chart.options.onHover = function(evt, ele) {
+      // console.log(evt.layerX);
+      if (ele.length === 0 ){
+        if(xPosiList.includes(evt.layerX)){
+          if( !customPopup ) {
+            customPopup = true
+            tooltipEl.classList = 'chartjs-tooltip';
+            tooltipEl.innerHTML =   `<div class="analytics1-popup">
+                                      <div class="popup-inner">
+                                        <div class="popup-heading">
+                                          <p class="popup-title">2020年11月17日（火）</p>
+                                          <p class="popup-subtxt">比較：1ヶ月前2020年10月17日（土）</p>
+                                        </div>
+                                        <div class="popup-result-list">
+                                          <div class="popup-result-item">
+                                            <p class="popup-result-item-label">売上</p>
+                                            <div class="popup-result-item-data">
+                                              <p class="popup-result-item-price">¥100,000</p>
+                                              <p class="popup-result-item-price-small">¥100,000</p>
+                                              <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
+                                            </div>
+                                          </div>
+                                          <div class="popup-result-item">
+                                            <p class="popup-result-item-label">リピーター</p>
+                                            <div class="popup-result-item-data">
+                                              <p class="popup-result-item-price">¥100,000</p>
+                                              <p class="popup-result-item-price-small">¥100,000</p>
+                                              <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
+                                            </div>
+                                          </div>
+                                          <div class="popup-result-item">
+                                            <p class="popup-result-item-label">新規</p>
+                                            <div class="popup-result-item-data">
+                                              <p class="popup-result-item-price">¥100,000</p>
+                                              <p class="popup-result-item-price-small">¥100,000</p>
+                                              <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>`;
+            tooltipEl.style.top = `${evt.layerY}px`
+            tooltipEl.style.right = `calc(100% - ${evt.layerX}px)`
+            tooltipEl.style.position = "absolute";
+            document.getElementsByClassName(analytics)[0].appendChild(tooltipEl);
+          }
+        } else if(customPopup) {
+          customPopup = false
+          document.getElementsByClassName(analytics)[0].removeChild(tooltipEl)
+        }
+      }
+    };
+  }
+  
 
   </script>
 

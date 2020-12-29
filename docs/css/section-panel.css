@@ -131,7 +131,7 @@
   margin: 2rem 0;
 }
 
-.analytics1 {
+.analytics1, .analytics2 {
   position: relative;
   width: 70% !important;
 }
