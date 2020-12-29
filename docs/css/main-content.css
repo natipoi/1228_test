@@ -97,7 +97,7 @@
 .export-box > a {
   color: #4E6CDE;
   text-decoration: underline;
-  font-size: 1rem;
+  /* font-size: 1rem; */
 }
 
 .picker-item > ion-icon {
@@ -121,7 +121,7 @@
   background: #fff;
   color: #4E6CDE;
   text-decoration: underline;
-  font-size: 14px;
+  /* font-size: 14px; */
   text-align: center;
   line-height: 1;
   transition: .2s;

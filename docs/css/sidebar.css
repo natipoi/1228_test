@@ -1,5 +1,7 @@
 #sidebar {
   position: relative;
+  /* 1228 追加 */
+  max-width: 240px;
   width: 20%;
   min-height: 100vh;
   background: #3b3b3d;
