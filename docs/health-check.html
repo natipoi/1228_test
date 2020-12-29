@@ -385,23 +385,86 @@
       </div>
     </div>
   </section>
-  <script>
-    window.onload = function(){
-      const items = document.querySelectorAll(".mv-items-content-alertLink");
-      for (var i=0; i<items.length; i+=2) {
-        const leftItem = items[i];
-        const leftItemH = leftItem.clientHeight;
-        const rightItem = items[i+1];
-        if(rightItem) {
-          var rightItemH = rightItem.clientHeight;
-          if( leftItemH < rightItemH ){
-            leftItem.style.height = `${rightItemH}px`
-          } else if ( leftItemH > rightItemH ) {
-            rightItem.style.height = `${leftItemH}px`
-          }
-        }
-      }
-    }
-  </script>
+  <section id="modal">
+    <div class="modal-panel">
+      <div class="modal-top">
+        <div class="modal-header">
+          <p>データ絞り込み</p>
+          <a href="#" onclick="closeModal()">キャンセル</a>
+        </div>
+        <div class="calendar">
+          <input type="text" id="date" readonly style="display: none;">
+        </div>
+      </div>
+      <div class="modal-bottom">
+        <div>
+          <div class="sort-range-box">
+            <p>期間</p>
+            <div class="sort-range-input">
+              <div class="sort-range">
+                <p>開始</p>
+                <input type="text" id="rangeStart" value="2020年9月1日(火)" readonly>
+              </div>
+              <div class="sort-range">
+                <p>終了</p>
+                <input type="text" id="rangeEnd" value="2020年9月1日(火)" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="confer-box">
+            <p>比較</p>
+            <div class="radio-box">
+              <div class="radio">
+                <input type="radio" name="confer" id="none" checked>
+                <label for="none">期間比較しない</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="confer" id="oneWeek">
+                <label for="oneWeek">指定期間の1週間前</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="confer" id="oneMonth">
+                <label for="oneMonth">指定期間の1ヶ月前</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="confer" id="threeMonth">
+                <label for="threeMonth">指定期間の3ヶ月前</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="confer" id="sixMonth">
+                <label for="sixMonth">指定期間の6ヶ月前</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="confer" id="lastYear">
+                <label for="lastYear">去年の同時期</label>
+              </div>
+            </div>
+          </div>
+          <div class="confer-box">
+            <p>カテゴリ</p>
+            <div class="radio-box">
+              <div class="radio">
+                <input type="radio" name="cat" id="noneCat" checked>
+                <label for="noneCat">カテゴリ比較しない</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="cat" id="oneCat">
+                <label for="oneCat">同ジャンル(アパレル)</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="cat" id="twoCat">
+                <label for="twoCat">指定期間の1ヶ月前</label>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-w">絞り込む</a>
+        </div>
+      </div>
+      
+      
+    </div>
+  </section>
+  <script src="js/health_check.js"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>
