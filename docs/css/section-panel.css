@@ -417,10 +417,23 @@ background: url("../img/icon_3.png") no-repeat center center/auto 100%;
 }
 
 .data-segment-top {position: relative;}
-    .data-segment-top::before {content:"";position: absolute;left: 5px;right: 5px;bottom:0;height: 1px;border-bottom: dashed 1px #ccc;}
-    .data-segment-title {position:relative; padding-left: 16px;}
-    .data-segment-title:before {content:"";position: absolute;left:0;top: 50%;transform: translateY(-50%); width:13px;height: 13px;border-radius: 50%;}
-    .data-segment-title__repeater:before {background-color: #f8bb45;}
-    .data-segment-title__repeaterBefore:before {background-color: #e0d1b5;}
-    .data-segment-title__new:before {background-color: #a7e3a2;}
-    .data-segment-title__newBefore:before {background-color:#d9e5d8;}
+.data-segment-top::before {content:"";position: absolute;left: 5px;right: 5px;bottom:0;height: 1px;border-bottom: dashed 1px #ccc;}
+.data-segment-title {position:relative; padding-left: 16px;}
+.data-segment-title:before {content:"";position: absolute;left:0;top: 50%;transform: translateY(-50%); width:13px;height: 13px;border-radius: 50%;}
+.data-segment-title__repeater:before {background-color: #f8bb45;}
+.data-segment-title__repeaterBefore:before {background-color: #e0d1b5;}
+.data-segment-title__new:before {background-color: #a7e3a2;}
+.data-segment-title__newBefore:before {background-color:#d9e5d8;}
+
+.analytics1-popup {border: 1px solid #ccc; position: relative;display: inline-block;background: #fff;}
+.popup-heading {background: #FAFAFA; padding: .3rem .4rem;}
+.popup-result-list {display: flex;padding: .2rem .4rem .4rem;}
+.popup-result-item {padding:.1rem .4rem; border-right: solid 1px #ccc; }
+.popup-result-item:last-child {border-right:none;}
+.popup-title, .popup-result-item-price {font-size: .8rem;font-weight: bold;}
+.popup-subtxt, .popup-result-item-label{font-size: .8rem;font-weight: normal;}
+.popup-result-item-data {text-align: right;}
+.popup-result-item-price-small {font-size: .8rem;color: #999999; }
+.popup-result-item-price-compare {font-size: .7rem;}
+.popup-result-item-price-compare .blue {color:#5CB7CC}
+.popup-result-item-price-compare .red {color:red}

@@ -19,13 +19,9 @@
   <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
-    .chartjs-tooltip {width: 100px; height: 100px;background: #000;}
+  <!-- <style>
     .analytics1 {position: relative;}
-    
-
-
-  </style>
+  </style> -->
 </head>
 
 <body>
@@ -1434,10 +1430,43 @@
         console.log(evt)
         customPopup = true
         tooltipEl.classList = 'chartjs-tooltip';
-        tooltipEl.innerHTML = '<p>test</p>';
+        tooltipEl.innerHTML =   `<div class="analytics1-popup">
+    <div class="popup-inner">
+      <div class="popup-heading">
+        <p class="popup-title">2020年11月17日（火）</p>
+        <p class="popup-subtxt">比較：1ヶ月前2020年10月17日（土）</p>
+      </div>
+      <div class="popup-result-list">
+        <div class="popup-result-item">
+          <p class="popup-result-item-label">売上</p>
+          <div class="popup-result-item-data">
+            <p class="popup-result-item-price">¥100,000</p>
+            <p class="popup-result-item-price-small">¥100,000</p>
+            <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
+          </div>
+        </div>
+        <div class="popup-result-item">
+          <p class="popup-result-item-label">リピーター</p>
+          <div class="popup-result-item-data">
+            <p class="popup-result-item-price">¥100,000</p>
+            <p class="popup-result-item-price-small">¥100,000</p>
+            <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
+          </div>
+        </div>
+        <div class="popup-result-item">
+          <p class="popup-result-item-label">新規</p>
+          <div class="popup-result-item-data">
+            <p class="popup-result-item-price">¥100,000</p>
+            <p class="popup-result-item-price-small">¥100,000</p>
+            <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
+          </div>
+        </div>
+      </div>
+    </div>`;
         tooltipEl.style.top = `${evt.layerY}px`
-        tooltipEl.style.left = `${evt.layerX}px`
+        tooltipEl.style.right = `calc(100% - ${evt.layerX}px)`
         tooltipEl.style.position = "absolute";
+        console.log(tooltipEl.clientWidth)
         document.getElementsByClassName('analytics1')[0].appendChild(tooltipEl);
       }
     } else if(customPopup) {
@@ -1447,6 +1476,9 @@
   };
 
   </script>
+
+  </div>
+
 </body>
 
 </html>
