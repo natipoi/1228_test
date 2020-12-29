@@ -206,6 +206,8 @@
 
 .mv-items-content.health {
   max-height: 80vh;
+  /* 1228 追加 */
+  width: 1200px;
   overflow-x: hidden;
   overflow-y: scroll;
   zoom: 1;
