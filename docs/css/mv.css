@@ -274,10 +274,13 @@
   border-radius: 4px;
   position: relative;
   box-sizing: border-box;
+  /* 1228 追加 */
+  border: solid 2px transparent;
 }
 
 .health .mv-items-content-alert:hover {
-  border: #4E6CDE 2px solid;
+  /* 1228 追加 */
+  border-color: #4E6CDE;
 }
 
 .health .mv-items-content-alert.music {
