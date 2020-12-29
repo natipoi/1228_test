@@ -290,22 +290,34 @@
 }
 
 .health .mv-items-content-alert i.close {
-  font-size: 12px;
+  /* font-size: 12px; */
   color: #666;
   width: 24px;
   height: 24px;
   margin: 0;
   position: absolute;
-  top: 12px;
-  right: 0;
+  /* top: 12px; */
+  /* right: 0; */
   /* 1228 追加 */
   font-style: normal;
+  top: 10px;
+  right: 10px;
+}
+.health .mv-items-content-alert i.close:hover {
+  cursor: pointer;
+  
 }
 
 .health .mv-items-content-alert a {
   color: #4E6CDE;
+  /* 1228 追加 */
+  display: block;
 }
 
+.mv-item-content-alertItems a {
+  color: #000 !important;
+  text-align: left;
+}
 
 .health .mv-items-content-alert:nth-of-type(2n - 1) {
   margin-right: 16px;
@@ -314,7 +326,7 @@
 
 .mv-items-content-alertLink {
   position: relative;
-  margin-left: 48px;
+  margin-left: 34px;
   font-size: 12px;
   color: #DE4E4E;
   text-decoration: underline;
@@ -326,6 +338,8 @@
   color: #000000;
   text-decoration: none;
   margin-bottom: 20px;
+  /* 1228 追加 */
+  text-align: left;
 }
 
 .mv-items-content-alertLink::before {
@@ -374,7 +388,10 @@
 }
 
 .mv-items-content-alertLink a {
-  font-size: 1.2rem;
+  /* 1228 追加 */
+  font-size: 1.0rem;
+  font-weight: bold;
+
   color: #DE4E4E;
   text-decoration: underline;
   line-height: 20px;
@@ -388,31 +405,39 @@
 }
 
 .mv-items-content-alertLink span b {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #DE4E4E;
-  font-weight: normal;
+  /* 1228 追加 */
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .health .mv-item-content-alertChecks {
-  font-size: 12px;
+  /* font-size: 12px; */
   line-height: 40px;
   background-color: #FFFFFF;
   border-radius: 4px;
   height: 40px;
-  margin-bottom: 10px;
+  /* 1228 追加 */
+  margin-top: 10px;
+  text-align: left;
+  font-size: 0.8rem;
+
   padding: 0px 14px;
   position: relative;
 }
 
 .health .mv-item-content-alertChecks::after {
-  content: ">";
-  font-size: 20px;
-  line-height: 40px;
+  /* 1228 追加 */
+  content: "\e5cc";
+  font-family: 'Material Icons';
+  font-size: 2.0rem;
+  /* line-height: 40px; */
   width: 30px;
   height: 40px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;
 }
 
 .health .mv-item-content-alertItems {
