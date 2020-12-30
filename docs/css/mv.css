@@ -215,6 +215,7 @@
   zoom: 1;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .mv-items-content01 {
@@ -269,7 +270,7 @@
 }
 
 .health .mv-items-content-alert {
-  width: calc(50% - 16px);
+  width: 49%;
   height: auto;
   line-height: inherit;
   margin-top: 16px;
@@ -323,7 +324,7 @@
 }
 
 .health .mv-items-content-alert:nth-of-type(2n - 1) {
-  margin-right: 16px;
+  /* margin-right: 16px; */
   clear: both;
 }
 
@@ -1714,3 +1715,14 @@ header {
   margin: 175px 0px 0px 240px;
 }
 
+/* 1228 追加 */
+@media screen and (min-width: 960px) {
+  .mv-items-content.health {
+    width: 1060px;
+    max-width: 1060px;
+  }
+  .health .mv-items-content-alert {
+    width: 33%;
+  }
+  
+}

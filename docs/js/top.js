@@ -121,6 +121,7 @@ var chart2 = new Chart(ctx2, {
         data: [100],
         backgroundColor: ['#ffffff'],
         borderColor: ['#ffffff'],
+        hoverBackgroundColor: ['#ffffff']
       },
       {
         data: [65, 35],
@@ -138,7 +139,7 @@ var chart2 = new Chart(ctx2, {
       display: false
     },
     hover: {
-      animationDuration: 0,
+      animationDuration: 0
     },
     responsiveAnimationDuration: 0,
     defaultFontSize: 12,
@@ -153,7 +154,8 @@ var chart2 = new Chart(ctx2, {
       borderWidth: 1,
       callbacks: {
         label: function(tooltipItem, data) {
-          return  data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString() + '％'
+          var num = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString();
+          return num + '％'
         }
       }
     }
@@ -396,11 +398,21 @@ function showCustomPopup(dataNum, chart, analytics){
       }
     }
     if(customPopup && !showPopup) {
-      console.log("範囲外範囲外範囲外範囲外！")
       document.getElementsByClassName(analytics)[0].removeChild(tooltipEl)
       customPopup = false
       showPopup = false
     }
   };
+}
+
+
+hideCenterDataset(chart2);
+hideCenterDataset(chart4);
+function hideCenterDataset(chart){
+  chart.options.onHover = function(evt, ele) {
+    if(ele.length !== 0){
+      chart.options.tooltips.enabled = ele[0]._datasetIndex !== 1
+    }
+  }
 }
 }

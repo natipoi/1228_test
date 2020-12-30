@@ -47,7 +47,7 @@
 
 .modal-bottom{
   overflow: scroll;
-  height: calc(95vh - 382px - 5vh);
+  height: calc(90vh - 421px);
 }
 
 .calendar {
