@@ -96,4 +96,5 @@
 .header-bottom-list li {margin: 0 10px;}
 .header-bottom-list img {margin-bottom: 5px;}
 .header-bottom-list a {color: unset;font-size: 0.86rem;font-weight: 600;color: #ADB0BE}
+.header-bottom-list a:hover {color: #4E6DDE;}
 .header-bottom-list .nav-icon {font-size: 30px;width: 28px;}

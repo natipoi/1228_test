@@ -358,24 +358,24 @@ function showCustomPopup(dataNum, chart, analytics){
                                           <p class="popup-result-item-label">売上</p>
                                           <div class="popup-result-item-data">
                                             <p class="popup-result-item-price">¥100,000</p>
-                                            <p class="popup-result-item-price-small">¥100,000</p>
+                                            <p class="popup-result-item-price-small">¥80,000</p>
                                             <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
                                           </div>
                                         </div>
                                         <div class="popup-result-item">
                                           <p class="popup-result-item-label">リピーター</p>
                                           <div class="popup-result-item-data">
-                                            <p class="popup-result-item-price">¥100,000</p>
-                                            <p class="popup-result-item-price-small">¥100,000</p>
-                                            <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
+                                            <p class="popup-result-item-price">¥70,000</p>
+                                            <p class="popup-result-item-price-small">¥60,000</p>
+                                            <p class="popup-result-item-price-compare">(<span class="blue">+¥10,0000</span>)</p>
                                           </div>
                                         </div>
                                         <div class="popup-result-item">
                                           <p class="popup-result-item-label">新規</p>
                                           <div class="popup-result-item-data">
-                                            <p class="popup-result-item-price">¥100,000</p>
-                                            <p class="popup-result-item-price-small">¥100,000</p>
-                                            <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
+                                            <p class="popup-result-item-price">¥30,000</p>
+                                            <p class="popup-result-item-price-small">¥20,000</p>
+                                            <p class="popup-result-item-price-compare">(<span class="red">-¥10,000</span>)</p>
                                           </div>
                                         </div>
                                       </div>

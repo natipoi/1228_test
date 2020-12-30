@@ -392,7 +392,7 @@
 
 .mv-items-content-alertLink a {
   /* 1228 追加 */
-  font-size: 1.0rem;
+  /* font-size: 1.0rem; */
   font-weight: bold;
 
   color: #DE4E4E;
@@ -402,7 +402,7 @@
 }
 
 .mv-items-content-alertLink span {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   line-height: 20px;
   display: block;
 }
