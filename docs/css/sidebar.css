@@ -6,6 +6,7 @@
   top: 108px;
   bottom: 0;
   background: #3b3b3d;
+  z-index: 10
 }
 
 #sidebar > ul {
