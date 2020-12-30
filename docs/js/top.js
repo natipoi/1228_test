@@ -283,6 +283,7 @@ var chart4 = new Chart(ctx4, {
         data: [100],
         backgroundColor: ['#ffffff'],
         borderColor: ['#ffffff'],
+        hoverBackgroundColor: ['#ffffff']
       },
       {
         data: [65, 35],
