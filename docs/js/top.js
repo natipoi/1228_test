@@ -341,10 +341,19 @@ function showCustomPopup(dataNum, chart, analytics){
   var customPopup = false;
   var tooltipEl = document.createElement('div');
   chart.options.onHover = function(evt, ele) {
-    // console.log(evt.layerX);
+
+    var showPopup = false
+    // ポイントの上でない
     if (ele.length === 0 ){
-      if(xPosiList.includes(evt.layerX)){
-        if( !customPopup ) {
+      for(var i=0; i<xPosiList.length; i++){
+        var evtX = xPosiList[i];
+        var hoverX = evt.layerX;
+        if(hoverX < evtX + 5 && hoverX > evtX - 5) {
+          showPopup = true
+          break;
+        }
+      }
+      if(!customPopup && showPopup){
           customPopup = true
           tooltipEl.classList = 'chartjs-tooltip';
           tooltipEl.innerHTML =   `<div class="analytics1-popup">
@@ -380,15 +389,17 @@ function showCustomPopup(dataNum, chart, analytics){
                                         </div>
                                       </div>
                                     </div>`;
-          tooltipEl.style.top = `${evt.layerY}px`
-          tooltipEl.style.right = `calc(100% - ${evt.layerX}px)`
+          tooltipEl.style.top = `${evt.layerY+ 5}px`
+          tooltipEl.style.right = `calc(100% - ${evt.layerX + 10}px)`
           tooltipEl.style.position = "absolute";
           document.getElementsByClassName(analytics)[0].appendChild(tooltipEl);
-        }
-      } else if(customPopup) {
-        customPopup = false
-        document.getElementsByClassName(analytics)[0].removeChild(tooltipEl)
       }
+    }
+    if(customPopup && !showPopup) {
+      console.log("範囲外範囲外範囲外範囲外！")
+      document.getElementsByClassName(analytics)[0].removeChild(tooltipEl)
+      customPopup = false
+      showPopup = false
     }
   };
 }

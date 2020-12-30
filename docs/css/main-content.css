@@ -1,7 +1,8 @@
 #main-content {
   position: relative;
   padding: 1rem;
-  width: 80%;
+  max-width: 100%;
+  margin-left: 248px;
 }
 
 .breadcrumbs {
