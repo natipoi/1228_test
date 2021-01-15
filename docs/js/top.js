@@ -59,7 +59,7 @@ var chart1 = new Chart(ctx1, {
         ticks: {
           min: 0,
           callback: function(label, index, labels) {
-            return label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +' 円';
+            return label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
           }
         },
       }, 
@@ -226,7 +226,7 @@ var chart3 = new Chart(ctx3, {
         ticks: {
           min: 0,
           callback: function(label, index, labels) {
-            return label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +' 円';
+            return label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
           }
         },
       }, {
