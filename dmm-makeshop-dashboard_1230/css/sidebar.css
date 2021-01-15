@@ -17,12 +17,8 @@
   text-align: left;
 }
 
-#sidebar > ul > li > a{
+#sidebar > ul > li {
   font-weight: bold;
-  color: #ADB0BE !important;
-}
-#sidebar > ul > li > a:hover {
-  opacity: 0.8;
 }
 
 #sidebar > ul > li:first-child {

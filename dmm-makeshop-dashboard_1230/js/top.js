@@ -58,17 +58,12 @@ var chart1 = new Chart(ctx1, {
         position: "left",
         ticks: {
           min: 0,
-          callback: function(label, index, labels) {
-            return label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +' 円';
-          }
         },
-      }, 
-      {
+      }, {
         id: "y-axis-2",
         type: "linear",
         position: "right",
         ticks: {
-          display: false,
           min: 0,
           max: 35000
         },
@@ -119,8 +114,8 @@ var chart2 = new Chart(ctx2, {
   data: {
     datasets: [{
         data: [70, 30],
-        backgroundColor: ['#f8bb45', '#a7e3a2'],
-        borderColor: ['#f8bb45', '#a7e3a2'],
+        backgroundColor: ['#feea96', '#a7e3a2'],
+        borderColor: ['#feea96', '#a7e3a2'],
       },
       {
         data: [100],
@@ -225,16 +220,12 @@ var chart3 = new Chart(ctx3, {
         position: "left",
         ticks: {
           min: 0,
-          callback: function(label, index, labels) {
-            return label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +' 円';
-          }
         },
       }, {
         id: "y-axis-2",
         type: "linear",
         position: "right",
         ticks: {
-          display: false,
           min: 0,
           max: 35000,
         },
@@ -285,8 +276,8 @@ var chart4 = new Chart(ctx4, {
   data: {
     datasets: [{
         data: [70, 30],
-        backgroundColor: ['#f8bb45', '#a7e3a2'],
-        borderColor: ['#f8bb45', '#a7e3a2'],
+        backgroundColor: ['#feea96', '#a7e3a2'],
+        borderColor: ['#feea96', '#a7e3a2'],
       },
       {
         data: [100],
