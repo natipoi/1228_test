@@ -108,7 +108,7 @@
   text-align: center;
 }
 
-.radio-box {
+.modal-input-box {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -116,51 +116,111 @@
   justify-content: flex-start;
 }
 
-.radio {
+.modal-input {
   position: relative;
   width: 49.5%;
   background: #fff;
   padding: 1rem;
   margin-bottom: 1%;
 }
+.modal-input label {
+  position: relative;
+  padding-left: 30px;
+}
 
-.radio:not(:nth-of-type(2n)) {
+.modal-input:not(:nth-of-type(2n)) {
   margin-right: 1%;
 }
 
-.radio > input[type="radio"] {
+.modal-input > input[type="radio"], .modal-input > input[type="checkbox"] {
   position: absolute;
   opacity: 0;
 }
 
-.radio > input[type="radio"] ~ label::before {
+.modal-input > input[type="radio"] ~ label::before, .modal-input > input[type="checkbox"] ~ label::before, .modal-input > input[type="checkbox"] ~ label::after {
   content: '';
-  background: #fff;
-  border-radius: 100%;
-  border: 1px solid #707070;
+  position: absolute;
   display: inline-block;
-  width: 1.4rem;
-  height: 1.4rem;
-  position: relative;
-  top: -0.2rem;
-  margin-right: .5rem; 
-  vertical-align: top;
+  /* background: #fff; */
+  margin-right: .5rem;
   cursor: pointer;
   text-align: center;
+  vertical-align: top;
   transition: all 250ms ease;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%)
+
 }
 
-.radio > input[type="radio"]:checked ~ label::before {
+.modal-input > input[type="radio"] ~ label::before {
+  border-radius: 100%;
+  border: 1px solid #707070;
+  width: 1.4rem;
+  height: 1.4rem;
+  
+}
+.modal-input > input[type="checkbox"] ~ label::before {
+  border: 1px solid #707070;
+  border-radius: 3px;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.modal-input > input[type="checkbox"] ~ label::after {
+  top: 30%;
+  left: -0.3rem;
+  font-size: 2.2rem;
+}
+
+.modal-input > input[type="radio"]:checked ~ label::before  {
   background-color: #4E6CDE;
   box-shadow: inset 0 0 0 4px #fff;
 }
 
-.radio > input[type="radio"]:focus ~ label::before {
+.modal-input > input[type="radio"]:focus ~ label::before {
   outline: none;
   border-color: #4E6CDE;
 }
 
-.radio > input[type="radio"]:disabled ~ label::before {
+.modal-input > input[type="radio"]:disabled ~ label::before {
   box-shadow: inset 0 0 0 4px #fff;
 }
+.modal-input > input[type="checkbox"]:checked ~ label::after {
+  content:"check";
+  color: #4E6CDE;
+  font-family: "Material Icons";
+}
+.modal-input > input[type="checkbox"]:disabled ~ label::before {
+  content:"check";
+  color: #4E6CDE;
+  font-family: "Material Icons";
+}
 
+.selected-box {
+  position: relative;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+.selected-box-ttl {
+  color: #4E6CDE;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+.selected-item {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #E2EFF7;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.selected-item-ttl {
+  color:#707070;
+  font-size: 0.86rem;
+}
+.selected-item-range {
+  color: #4E6CDE;
+  margin-left: 5px;
+}
