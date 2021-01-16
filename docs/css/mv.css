@@ -200,6 +200,10 @@
   background-color: #fff;
 }
 
+.mv-top {position:relative; text-align: center;width: 100%; color: #999999;margin: 10px 0 0;max-width: 1040px;}
+.mv-problem-reset {position: absolute;right:0;top:0;color: #4E6CDE;text-decoration: underline;}
+.mv-top span {color: #DE4E4E}
+
 .mv-items-content {
   padding-top: 16px;
 }
@@ -312,7 +316,7 @@
 }
 
 .health .mv-items-content-alert a {
-  color: #4E6CDE;
+  color: #DE4E4E;
   /* 1228 追加 */
   display: block;
 }
