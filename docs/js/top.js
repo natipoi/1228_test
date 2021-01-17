@@ -1,6 +1,6 @@
 window.onload = function(){
   var ctx1 = document.getElementById('analytics1').getContext('2d');
-  var chart1 = new Chart(ctx1, {
+  var lineChart1 = new Chart(ctx1, {
     type: 'line',
     data: {
       labels: ['11/1', '11/2','11/3', '11/4','11/5', '11/6','11/7','11/8', '11/9', '11/10','11/11','11/12', '11/13','11/14', '11/15', '11/6','11/17', '11/18','11/19', '11/20','11/21', '11/22','11/23', '11/24','11/25','11/26', '11/27','11/28', '11/29','11/30', '11/31'],
@@ -114,7 +114,7 @@ window.onload = function(){
     }
   });
   var ctx2 = document.getElementById('graf1').getContext('2d');
-  var chart2 = new Chart(ctx2, {
+  var donutsChart1 = new Chart(ctx2, {
     type: 'doughnut',
     data: {
       datasets: [{
@@ -167,7 +167,7 @@ window.onload = function(){
     }
   });
   var ctx3 = document.getElementById('analytics2').getContext('2d');
-  var chart3 = new Chart(ctx3, {
+  var lineChart2 = new Chart(ctx3, {
     type: 'line',
     data: {
       labels: ['11/1', '11/2','11/3', '11/4','11/5', '11/6','11/7','11/8', '11/9', '11/10','11/11','11/12', '11/13','11/14', '11/15', '11/16','11/17', '11/18','11/19', '11/20','11/21', '11/22','11/23', '11/24','11/25','11/26', '11/27','11/28', '11/29','11/30', '11/31'],
@@ -322,9 +322,8 @@ window.onload = function(){
       }
     }
   });
-
   var ctx4 = document.getElementById('graf2').getContext('2d');
-  var chart4 = new Chart(ctx4, {
+  var donutsChart2 = new Chart(ctx4, {
     type: 'doughnut',
     data: {
       datasets: [{
@@ -376,11 +375,11 @@ window.onload = function(){
     }
   });
   
-  const chart1_dataNum = chart1.config.data.labels.length
-  showCustomPopup(chart1_dataNum, chart1, "analytics1");
+  const lineChart1_dataNum = lineChart1.config.data.labels.length
+  showCustomPopup(lineChart1_dataNum, lineChart1, "analytics1");
   
-  const chart3_dataNum = chart3.config.data.labels.length
-  showCustomPopup(chart3_dataNum, chart3, "analytics2");
+  const lineChart2_dataNum = lineChart2.config.data.labels.length
+  showCustomPopup(lineChart2_dataNum, lineChart2, "analytics2");
   
   function showCustomPopup(dataNum, chart, analytics){
     var xPosiList = []
@@ -432,7 +431,7 @@ window.onload = function(){
             document.getElementsByClassName(analytics)[0].appendChild(tooltipEl);
         }
       }
-      if((customPopup && !showPopup) || graphH - 20 === hoverY || hoverY === 20 || hoverX === 20 || graphW - 20 === hoverX) {
+      if((customPopup && !showPopup)) {
         if( document.getElementsByClassName(analytics)[0].hasChildNodes()) {
           document.getElementsByClassName(analytics)[0].removeChild(tooltipEl)
           customPopup = false
@@ -443,8 +442,8 @@ window.onload = function(){
     };
   }
 
-  hideCenterDataset(chart2);
-  hideCenterDataset(chart4);
+  hideCenterDataset(donutsChart1);
+  hideCenterDataset(donutsChart2);
   function hideCenterDataset(chart){
     chart.options.onHover = function(evt, ele) {
       if(ele.length !== 0){
