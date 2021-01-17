@@ -524,9 +524,7 @@ window.onload = function(){
       </div>`;
     }
   }
-}
 
-window.onload = function(){
   var id = location.hash;
   if (id){
     $("html,body").animate({scrollTop: $(id).position().top - 10});
@@ -541,3 +539,4 @@ window.onload = function(){
     $(this).parent().addClass("nav-active");
   })
 }
+
