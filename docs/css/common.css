@@ -43,6 +43,8 @@
 
 .alert > img {
   margin-right: 1rem;
+  width: 20px;
+  height: 20px;
 }
 
 .alert > p {
