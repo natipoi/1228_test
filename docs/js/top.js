@@ -525,3 +525,16 @@ window.onload = function(){
     }
   }
 }
+
+window.onload = function(){
+  var id = location.hash;
+  $("html,body").animate({scrollTop: $(id).position().top - 10});
+  id = id.replace("#", "")
+  $(`a[data=${id}]`).parent().addClass("nav-active");
+  $(".slide-btn").on("click", function(){
+    var id = $(this).attr("data");
+    $("html,body").animate({scrollTop: $('#'+ id).position().top - 10});
+    $(".nav-active").removeClass("nav-active");
+    $(this).parent().addClass("nav-active");
+  })
+}
