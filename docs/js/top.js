@@ -501,7 +501,7 @@ window.onload = function(){
             <div class="popup-result-item-data">
               <p class="popup-result-item-price">${unit}1,000,000</p>
               <p class="popup-result-item-price-small">${unit}800,000</p>
-              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}400,0000</span>)</p>
+              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}400,000</span>)</p>
             </div>
           </div>
           <div class="popup-result-item">
