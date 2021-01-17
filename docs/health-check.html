@@ -166,35 +166,39 @@
         </li>
       </ul>
       <div class="toolbar">
-        <p>データ絞り込み</p>
-        <div class="date-control">
-          <div id="date-picker">
-            <span>期間</span>
-            <a href="#" onclick="openModal()">2020年10月1日 - 2020年10月7日</a>
-            <span>比較</span>
-            <a href="#" onclick="openModal()">1ヶ月前</a>
-          </div>
-          <div class="picker-item">
-            <ion-icon name="close-outline"></ion-icon>
-            <a href="#" onclick="openModal()">アパレル</a>
-          </div>
-          <div class="picker-item">
-            <ion-icon name="close-outline"></ion-icon>
-            <a href="#" onclick="openModal()">アイテムポスト</a>
+        <div class="toolbar-filter">
+          <p>データ絞り込み</p>
+          <div class="date-control">
+            <div id="date-picker">
+              <span>期間</span>
+              <a href="#" onclick="openModal()">2020年10月1日 - 2020年10月7日</a>
+              <span>比較</span>
+              <a href="#" onclick="openModal()">1ヶ月前</a>
+            </div>
+            <div class="picker-item">
+              <ion-icon name="close-outline"></ion-icon>
+              <a href="#" onclick="openModal()">アパレル</a>
+            </div>
+            <div class="picker-item">
+              <ion-icon name="close-outline"></ion-icon>
+              <a href="#" onclick="openModal()">アイテムポスト</a>
+            </div>
           </div>
         </div>
-        <div class="date-toggle">
-          <input type="radio" name="date-toggle" id="day" checked>
-          <label for="day">日別</label>
-          <input type="radio" name="date-toggle" id="month">
-          <label for="month">月別</label>
-          <input type="radio" name="date-toggle" id="year">
-          <label for="year">年別</label>
-        </div>
-        <p>レポート</p>
-        <div class="export-box">
-          <span>出力</span>
-          <a href="#">CSV</a>
+        <div class="toolbar-right">
+          <div class="date-toggle">
+            <input type="radio" name="date-toggle" id="day" checked>
+            <label for="day">日別</label>
+            <input type="radio" name="date-toggle" id="month">
+            <label for="month">月別</label>
+            <input type="radio" name="date-toggle" id="year">
+            <label for="year">年別</label>
+          </div>
+          <p>レポート</p>
+          <div class="export-box">
+            <span>出力</span>
+            <a href="#">CSV</a>
+          </div>
         </div>
       </div>
       <div class="mv-items">
