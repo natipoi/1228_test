@@ -58,6 +58,8 @@
   justify-content: flex-end;
 }
 
+
+
 .data-segment-box-min > .data-segment-top > span:first-child,
 .data-segment-box-min > .data-segment-main > .data-segment-text:first-child  > span:first-child {
   display: block;
@@ -105,6 +107,14 @@
   font-size: .86rem;
   display: flex;
   color: #333333;
+}
+
+@media screen and (max-width: 1200px) {
+  .data-segment-text {display: block;}
+  .data-segment-top > span:nth-child(3),
+.data-segment-text > span:nth-child(3) {
+  display: block;
+}
 }
 
 .data-segment-text > span:first-child {

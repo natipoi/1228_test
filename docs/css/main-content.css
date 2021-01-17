@@ -45,6 +45,14 @@
   padding: 1rem 0;
 }
 
+.toolbar-filter, .toolbar-right {display: flex;align-items: center;flex-wrap: wrap;}
+.toolbar-right {margin-left: auto;}
+
+@media screen and (max-width: 1450px) {
+  .toolbar {display: block;}
+  .toolbar-filter {margin-bottom: 10px;}
+  .date-toggle {margin-left: auto}
+}
 .toolbar > p {
   position: relative;
   font-weight: bold;
@@ -63,9 +71,12 @@
 .date-control {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   margin-right: auto;
 }
-
+.date-control > div {
+  margin-bottom: 5px;
+}
 #date-picker,
 .picker-item,
 .export-box {
