@@ -8,7 +8,7 @@
   background: #3b3b3d;
   z-index: 10
 }
-
+.nav-active-default,
 .nav-active {background-color: #506edb;}
 
 #sidebar > ul {
@@ -28,7 +28,7 @@
 
 #sidebar > ul > li:first-child {
   padding: 1rem .5rem;
-  background: #506edb;
+  /* background: #506edb; */
 }
 
 #sidebar > ul > li:first-child > a > img {
