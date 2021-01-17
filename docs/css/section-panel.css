@@ -85,6 +85,7 @@
   color: #333333;
 }
 
+
 .data-segment-top > span {
   font-size: .86rem;
   font-weight: normal;
@@ -108,13 +109,21 @@
   display: flex;
   color: #333333;
 }
-
-@media screen and (max-width: 1200px) {
-  .data-segment-text {display: block;}
-  .data-segment-top > span:nth-child(3),
-.data-segment-text > span:nth-child(3) {
-  display: block;
+span.bold {
+  font-weight: bold;
 }
+@media screen and (max-width: 1200px) {
+  .data-segment-text, .data-segment-top {
+    display: block;
+    text-align: left;
+  }
+  .data-segment-text span, .data-segment-top span {
+    display: block;
+  }
+  .data-segment-text span:not(:first-child), .data-segment-top span:not(:first-child) {
+    padding-left: 10px;
+  }
+
 }
 
 .data-segment-text > span:first-child {
