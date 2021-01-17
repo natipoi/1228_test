@@ -180,7 +180,7 @@ window.onload = function(){
           pointRadius: 3,
           lineTension: 0,
           yAxisID: 'y-axis-1',
-          data: [510000, 410000, 560000, 390000, 480000, 410000, 560000, 390000, 480000, 560000, 640000, 590000, 480000, 540000, 690000, 460000, 510000, 410000, 560000, 390000, 480000, 410000, 560000, 390000, 480000, 560000, 640000, 590000, 480000, 540000, 690000, 460000],
+          data: [300000, 390000, 350000, 390000, 310000, 310000, 350000, 390000, 290000, 350000, 320000, 310000, 290000, 280000, 310000, 300000, 350000, 290000, 320000, 390000, 310000, 310000, 290000, 300000, 310000, 290000, 290000, 280000, 340000, 290000, 300000, 390000],
         },
         {
           backgroundColor: 'rgba(0, 0, 0, 0)',
@@ -191,7 +191,7 @@ window.onload = function(){
           pointRadius: 3,
           lineTension: 0,
           yAxisID: 'y-axis-1',
-          data: [480000, 380000, 500000, 360000, 420000, 360000, 550000, 310000, 470000, 530000, 600000, 550000, 460000, 530000, 660000, 430000, 480000, 380000, 500000, 360000, 420000, 360000, 550000, 310000, 470000, 530000, 600000, 550000, 460000, 530000, 660000, 430000],
+          data: [260000, 350000, 320000, 360000, 280000, 280000, 320000, 360000, 260000, 320000, 290000, 280000, 260000, 250000, 280000, 270000, 320000, 260000, 290000, 360000, 280000, 280000, 260000, 270000, 280000, 260000, 260000, 250000, 310000, 260000, 270000, 360000],
         },
         {
           backgroundColor: 'rgba(0, 0, 0, 0)',
@@ -202,7 +202,7 @@ window.onload = function(){
           pointRadius: 3,
           lineTension: 0,
           yAxisID: 'y-axis-2',
-          data: [6000, 6000, 11000, 14000, 13000, 6000, 11000, 14000, 13000, 11000, 9000, 14000, 13000, 9000, 14000, 11000, 6000, 6000, 11000, 14000, 13000, 6000, 11000, 14000, 13000, 11000, 9000, 14000, 13000, 9000, 14000, 11000],
+          data: [100000, 120000, 110000, 90000, 110000, 120000, 130000, 80000, 60000, 120000, 90000, 150000, 120000, 100000, 90000, 120000, 110000, 80000, 100000, 110000, 120000, 140000, 100000, 90000, 110000, 100000, 90000, 130000, 100000, 110000, 90000, 100000],
         },
         {
           backgroundColor: 'rgba(0, 0, 0, 0)',
@@ -213,7 +213,29 @@ window.onload = function(){
           pointRadius: 3,
           lineTension: 0,
           yAxisID: 'y-axis-2',
-          data: [4000, 3000, 1000, 2000, 8000, 2000, 11000, 9000, 13000, 9000, 6000, 11000, 12000, 9000, 12000, 9000, 4000, 3000, 1000, 2000, 8000, 2000, 11000, 9000, 13000, 9000, 6000, 11000, 12000, 9000, 12000, 9000],
+          data: [80000, 100000, 90000, 70000, 90000, 100000, 110000, 60000, 40000, 100000, 70000, 130000, 100000, 80000, 70000, 100000, 90000, 60000, 80000, 90000, 100000, 120000, 100000, 70000, 90000, 80000, 70000, 110000, 80000, 90000, 70000, 80000],
+        },
+        {
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderColor: '#d2d2d2',
+          borderWidth: 2,
+          pointBackgroundColor: '#1B3491',
+          pointBorderColor: '#1B3491',
+          pointRadius: 3,
+          lineTension: 0,
+          yAxisID: 'y-axis-3',
+          data: [500000, 450000, 490000, 410000, 500000, 410000, 390000, 410000, 450000, 480000, 400000, 490000, 480000, 410000, 440000, 430000, 480000, 420000, 410000, 500000, 410000, 420000, 480000, 440000, 490000, 500000, 410000, 450000, 470000, 420000, 490000, 500000],
+        },
+        {
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderColor: '#eeeeee',
+          borderWidth: 2,
+          pointBackgroundColor: '#C7DFEF',
+          pointBorderColor: '#C7DFEF',
+          pointRadius: 3,
+          lineTension: 0,
+          yAxisID: 'y-axis-3',
+          data: [470000, 420000, 460000, 380000, 470000, 380000, 360000, 380000, 420000, 450000, 370000, 460000, 450000, 380000, 410000, 400000, 450000, 390000, 380000, 470000, 380000, 390000, 450000, 410000, 460000, 470000, 380000, 420000, 440000, 390000, 460000, 470000],
         },
       ]
     },
@@ -225,23 +247,44 @@ window.onload = function(){
           position: "left",
           ticks: {
             min: 0,
+            max: 500000,
+            stepSize: 100000,
             callback: function(label, index, labels) {
               return label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             }
           },
-        }, {
+        }, 
+        {
           id: "y-axis-2",
           type: "linear",
           position: "right",
           ticks: {
             display: false,
             min: 0,
-            max: 35000,
+            max: 500000,
+            stepSize: 100000,
           },
           gridLines: {
+            display: false,
             drawOnChartArea: false,
           },
-        }],
+        },
+        {
+          id: "y-axis-3",
+          type: "linear",
+          position: "right",
+          ticks: {
+            min: 0,
+            max: 500000,
+            stepSize: 100000,
+            display: false
+          },
+          gridLines: {
+            display: false,
+            drawOnChartArea: false,
+          },
+        }
+      ],
         xAxes: [{
           gridLines: {
             display: true,
@@ -273,12 +316,13 @@ window.onload = function(){
         borderWidth: 1,
         callbacks: {
           label: function(tooltipItem, data) {
-            return  data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString() + '円'
+            return  data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString()
           }
         }
       }
     }
   });
+
   var ctx4 = document.getElementById('graf2').getContext('2d');
   var chart4 = new Chart(ctx4, {
     type: 'doughnut',
@@ -340,12 +384,13 @@ window.onload = function(){
   
   function showCustomPopup(dataNum, chart, analytics){
     var xPosiList = []
-    
+    console.log(chart.data.datasets)
     for(var i=0; i < 1; i++) {
       var meta = chart.getDatasetMeta(i)
       var data = meta.data
       var x = 0;
       for(var k=0; k<data.length; k++){
+
         xPosiList.push(Math.round(data[k]["_model"].x))
       }
       var x = meta;
@@ -353,7 +398,6 @@ window.onload = function(){
     var customPopup = false;
     var tooltipEl = document.createElement('div');
     chart.options.onHover = function(evt, ele) {
-  
       var showPopup = false
       const hoverX = evt.layerX;
       const hoverY = evt.layerY;
@@ -370,44 +414,11 @@ window.onload = function(){
             break;
           }
         }
-        
 
         if(!customPopup && showPopup){
             customPopup = true
             tooltipEl.classList = 'chartjs-tooltip';
-            tooltipEl.innerHTML =   `<div class="analytics1-popup">
-                                      <div class="popup-inner">
-                                        <div class="popup-heading">
-                                          <p class="popup-title">2020年11月17日（火）</p>
-                                          <p class="popup-subtxt">比較：1ヶ月前2020年10月17日（土）</p>
-                                        </div>
-                                        <div class="popup-result-list">
-                                          <div class="popup-result-item">
-                                            <p class="popup-result-item-label">売上</p>
-                                            <div class="popup-result-item-data">
-                                              <p class="popup-result-item-price">¥100,000</p>
-                                              <p class="popup-result-item-price-small">¥80,000</p>
-                                              <p class="popup-result-item-price-compare">(<span class="blue">+¥40,0000</span>)</p>
-                                            </div>
-                                          </div>
-                                          <div class="popup-result-item">
-                                            <p class="popup-result-item-label">リピーター</p>
-                                            <div class="popup-result-item-data">
-                                              <p class="popup-result-item-price">¥70,000</p>
-                                              <p class="popup-result-item-price-small">¥60,000</p>
-                                              <p class="popup-result-item-price-compare">(<span class="blue">+¥10,0000</span>)</p>
-                                            </div>
-                                          </div>
-                                          <div class="popup-result-item">
-                                            <p class="popup-result-item-label">新規</p>
-                                            <div class="popup-result-item-data">
-                                              <p class="popup-result-item-price">¥30,000</p>
-                                              <p class="popup-result-item-price-small">¥20,000</p>
-                                              <p class="popup-result-item-price-compare">(<span class="red">-¥10,000</span>)</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>`;
+            tooltipEl.innerHTML =  createPopupForAnalytics(analytics)
             
             var popupTop;
             if (graphH / 2 < hoverY) {
@@ -431,8 +442,7 @@ window.onload = function(){
       }
     };
   }
-  
-  
+
   hideCenterDataset(chart2);
   hideCenterDataset(chart4);
   function hideCenterDataset(chart){
@@ -442,4 +452,77 @@ window.onload = function(){
       }
     }
   }
+  function createPopupForAnalytics(analytics){
+    var unit = "";
+    if (analytics === "analytics1") {
+      unit = "¥"
+      return `<div class="analytics1-popup">
+      <div class="popup-inner">
+        <div class="popup-heading">
+          <p class="popup-title">2020年11月17日（火）</p>
+          <p class="popup-subtxt">比較：1ヶ月前2020年10月17日（土）</p>
+        </div>
+        <div class="popup-result-list">
+          <div class="popup-result-item">
+            <p class="popup-result-item-label">売上</p>
+            <div class="popup-result-item-data">
+              <p class="popup-result-item-price">${unit}100,000</p>
+              <p class="popup-result-item-price-small">${unit}80,000</p>
+              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}40,0000</span>)</p>
+            </div>
+          </div>
+          <div class="popup-result-item">
+            <p class="popup-result-item-label">リピーター</p>
+            <div class="popup-result-item-data">
+              <p class="popup-result-item-price">${unit}70,000</p>
+              <p class="popup-result-item-price-small">${unit}60,000</p>
+              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}10,0000</span>)</p>
+            </div>
+          </div>
+          <div class="popup-result-item">
+            <p class="popup-result-item-label">新規</p>
+            <div class="popup-result-item-data">
+              <p class="popup-result-item-price">${unit}30,000</p>
+              <p class="popup-result-item-price-small">${unit}20,000</p>
+              <p class="popup-result-item-price-compare">(<span class="red">-${unit}10,000</span>)</p>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    } else {
+      return `<div class="analytics1-popup">
+      <div class="popup-inner">
+        <div class="popup-heading">
+          <p class="popup-title">2020年11月17日（火）</p>
+          <p class="popup-subtxt">比較：1ヶ月前2020年10月17日（土）</p>
+        </div>
+        <div class="popup-result-list">
+          <div class="popup-result-item">
+            <p class="popup-result-item-label">来訪者数</p>
+            <div class="popup-result-item-data">
+              <p class="popup-result-item-price">${unit}1,000,000</p>
+              <p class="popup-result-item-price-small">${unit}800,000</p>
+              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}400,0000</span>)</p>
+            </div>
+          </div>
+          <div class="popup-result-item">
+            <p class="popup-result-item-label">リピーター</p>
+            <div class="popup-result-item-data">
+              <p class="popup-result-item-price">${unit}25,000</p>
+              <p class="popup-result-item-price-small">${unit}30,000</p>
+              <p class="popup-result-item-price-compare">(<span class="red">-${unit}5,000</span>)</p>
+            </div>
+          </div>
+          <div class="popup-result-item">
+            <p class="popup-result-item-label">新規</p>
+            <div class="popup-result-item-data">
+              <p class="popup-result-item-price">${unit}5,000</p>
+              <p class="popup-result-item-price-small">${unit}3,000</p>
+              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}2,000</span>)</p>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    }
   }
+}
