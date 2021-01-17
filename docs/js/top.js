@@ -355,17 +355,23 @@ window.onload = function(){
     chart.options.onHover = function(evt, ele) {
   
       var showPopup = false
+      const hoverX = evt.layerX;
+      const hoverY = evt.layerY;
+      const graphH = document.getElementsByClassName(analytics)[0].clientHeight;
+      const graphW = document.getElementsByClassName(analytics)[0].clientWidth;
+      
       // ポイントの上でない
       if (ele.length === 0 ){
+        
         for(var i=0; i<xPosiList.length; i++){
           var evtX = xPosiList[i];
-          var hoverX = evt.layerX;
-          console.log("hoverX is ", evt.layerY)
           if(hoverX < evtX + 5 && hoverX > evtX - 5) {
             showPopup = true
             break;
           }
         }
+        
+
         if(!customPopup && showPopup){
             customPopup = true
             tooltipEl.classList = 'chartjs-tooltip';
@@ -402,8 +408,7 @@ window.onload = function(){
                                           </div>
                                         </div>
                                       </div>`;
-            const graphH = document.getElementsByClassName(analytics)[0].clientHeight;
-            const hoverY = evt.layerY
+            
             var popupTop;
             if (graphH / 2 < hoverY) {
               popupTop = hoverY - 130
@@ -413,14 +418,16 @@ window.onload = function(){
             tooltipEl.style.top = `${popupTop}px`
             tooltipEl.style.right = `calc(100% - ${evt.layerX - 10 }px)`
             tooltipEl.style.position = "absolute";
-            console.log()
             document.getElementsByClassName(analytics)[0].appendChild(tooltipEl);
         }
       }
-      if(customPopup && !showPopup) {
-        document.getElementsByClassName(analytics)[0].removeChild(tooltipEl)
-        customPopup = false
-        showPopup = false
+      if((customPopup && !showPopup) || graphH - 20 === hoverY || hoverY === 20 || hoverX === 20 || graphW - 20 === hoverX) {
+        if( document.getElementsByClassName(analytics)[0].hasChildNodes()) {
+          document.getElementsByClassName(analytics)[0].removeChild(tooltipEl)
+          customPopup = false
+          showPopup = false
+        }
+        
       }
     };
   }
