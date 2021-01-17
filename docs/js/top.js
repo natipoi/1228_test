@@ -360,6 +360,7 @@ window.onload = function(){
         for(var i=0; i<xPosiList.length; i++){
           var evtX = xPosiList[i];
           var hoverX = evt.layerX;
+          console.log("hoverX is ", evt.layerY)
           if(hoverX < evtX + 5 && hoverX > evtX - 5) {
             showPopup = true
             break;
@@ -401,9 +402,18 @@ window.onload = function(){
                                           </div>
                                         </div>
                                       </div>`;
-            tooltipEl.style.top = `${evt.layerY+ 5}px`
-            tooltipEl.style.right = `calc(100% - ${evt.layerX + 10}px)`
+            const graphH = document.getElementsByClassName(analytics)[0].clientHeight;
+            const hoverY = evt.layerY
+            var popupTop;
+            if (graphH / 2 < hoverY) {
+              popupTop = hoverY - 130
+            } else {
+              popupTop = hoverY + 5
+            }
+            tooltipEl.style.top = `${popupTop}px`
+            tooltipEl.style.right = `calc(100% - ${evt.layerX - 10 }px)`
             tooltipEl.style.position = "absolute";
+            console.log()
             document.getElementsByClassName(analytics)[0].appendChild(tooltipEl);
         }
       }
