@@ -19,7 +19,7 @@
 .modal-panel {
   position: relative;
   /* overflow: scroll; */
-  width: 50%;
+  width: 600px;
   height: 95vh;
   background: #FAFAFA;
 }
