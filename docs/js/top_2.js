@@ -105,12 +105,7 @@ window.onload = function(){
           backgroundColor: ['#ffffff'],
           borderColor: ['#ffffff'],
           hoverBackgroundColor: ['#ffffff']
-        },
-        {
-          data: [65, 35],
-          backgroundColor: ['#e0d1b5', '#d9e5d8'],
-          borderColor: ['#e0d1b5', '#d9e5d8'],
-        },
+        }
       ]
     },
     options: {
