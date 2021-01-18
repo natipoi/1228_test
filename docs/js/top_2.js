@@ -399,31 +399,27 @@ window.onload = function(){
       <div class="popup-inner">
         <div class="popup-heading">
           <p class="popup-title">2020年11月17日（火）</p>
-          <p class="popup-subtxt">比較：1ヶ月前2020年10月17日（土）</p>
         </div>
         <div class="popup-result-list">
           <div class="popup-result-item">
             <p class="popup-result-item-label">売上</p>
             <div class="popup-result-item-data">
               <p class="popup-result-item-price">${unit}100,000</p>
-              <p class="popup-result-item-price-small">${unit}80,000</p>
-              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}40,0000</span>)</p>
+              <p class="popup-result-item-price-small">-</p>
             </div>
           </div>
           <div class="popup-result-item">
             <p class="popup-result-item-label">リピーター</p>
             <div class="popup-result-item-data">
               <p class="popup-result-item-price">${unit}70,000</p>
-              <p class="popup-result-item-price-small">${unit}60,000</p>
-              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}10,0000</span>)</p>
+              <p class="popup-result-item-price-small">-</p>
             </div>
           </div>
           <div class="popup-result-item">
             <p class="popup-result-item-label">新規</p>
             <div class="popup-result-item-data">
               <p class="popup-result-item-price">${unit}30,000</p>
-              <p class="popup-result-item-price-small">${unit}20,000</p>
-              <p class="popup-result-item-price-compare">(<span class="red">-${unit}10,000</span>)</p>
+              <p class="popup-result-item-price-small">-</p>
             </div>
           </div>
         </div>
@@ -433,31 +429,27 @@ window.onload = function(){
       <div class="popup-inner">
         <div class="popup-heading">
           <p class="popup-title">2020年11月17日（火）</p>
-          <p class="popup-subtxt">比較：1ヶ月前2020年10月17日（土）</p>
         </div>
         <div class="popup-result-list">
           <div class="popup-result-item">
             <p class="popup-result-item-label">来訪者数</p>
             <div class="popup-result-item-data">
               <p class="popup-result-item-price">${unit}1,000,000</p>
-              <p class="popup-result-item-price-small">${unit}800,000</p>
-              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}400,000</span>)</p>
+              <p class="popup-result-item-price-small">-</p>
             </div>
           </div>
           <div class="popup-result-item">
             <p class="popup-result-item-label">リピーター</p>
             <div class="popup-result-item-data">
               <p class="popup-result-item-price">${unit}25,000</p>
-              <p class="popup-result-item-price-small">${unit}30,000</p>
-              <p class="popup-result-item-price-compare">(<span class="red">-${unit}5,000</span>)</p>
+              <p class="popup-result-item-price-small">-</p>
             </div>
           </div>
           <div class="popup-result-item">
             <p class="popup-result-item-label">新規</p>
             <div class="popup-result-item-data">
               <p class="popup-result-item-price">${unit}5,000</p>
-              <p class="popup-result-item-price-small">${unit}3,000</p>
-              <p class="popup-result-item-price-compare">(<span class="blue">+${unit}2,000</span>)</p>
+              <p class="popup-result-item-price-small">-</p>
             </div>
           </div>
         </div>
