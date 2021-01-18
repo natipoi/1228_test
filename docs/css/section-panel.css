@@ -450,7 +450,7 @@ background: url("../img/icon_3.png") no-repeat center center/auto 100%;
 .data-segment-title__new:before {background-color: #a7e3a2;}
 .data-segment-title__newBefore:before {background-color:#d9e5d8;}
 
-.analytics1-popup {border: 1px solid #ccc; position: relative;display: inline-block;background: #fff;}
+.analytics1-popup {border: 1px solid #ccc; position: relative;display: inline-block;background: #fff;z-index: 1000;}
 .popup-heading {background: #FAFAFA; padding: .3rem .4rem;}
 .popup-result-list {display: flex;padding: .2rem .4rem .4rem;}
 .popup-result-item {padding:.1rem .4rem; border-right: solid 1px #ccc; }
