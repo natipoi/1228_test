@@ -315,11 +315,22 @@ window.onload = function(){
     }
   });
   
-  const lineChart1_dataNum = lineChart1.config.data.labels.length
-  showCustomPopup(lineChart1_dataNum, lineChart1, "analytics1");
+  function setData(){
+    const oldPopup = document.getElementsByClassName("analytics1-popup");
+    if(oldPopup.length !== 0){
+      oldPopup[0].remove();
+    }
+    const lineChart1_dataNum = lineChart1.config.data.labels.length
+    showCustomPopup(lineChart1_dataNum, lineChart1, "analytics1");
+
+    const lineChart2_dataNum = lineChart2.config.data.labels.length
+    showCustomPopup(lineChart2_dataNum, lineChart2, "analytics2");
+  }
+  setData();
   
-  const lineChart2_dataNum = lineChart2.config.data.labels.length
-  showCustomPopup(lineChart2_dataNum, lineChart2, "analytics2");
+  window.addEventListener( 'resize', function() {
+    setTimeout(function(){ setData() }, 1000);
+  }, true);
   
   function showCustomPopup(dataNum, chart, analytics){
     var xPosiList = []
