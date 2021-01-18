@@ -52,7 +52,7 @@
 @media screen and (max-width: 1450px) {
   .toolbar {display: block;}
   .toolbar-filter {margin-bottom: 10px;}
-  .date-toggle {margin-left: auto}
+  /* .date-toggle {margin-left: auto} */
 }
 .toolbar > p {
   position: relative;
