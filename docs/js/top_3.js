@@ -136,7 +136,7 @@ window.onload = function(){
       ]
     },
     options: {
-      rotation: 1.5,
+      rotation: 11,
       title: {
         display: false
       },
@@ -323,7 +323,7 @@ window.onload = function(){
       ]
     },
     options: {
-      rotation: 1.5,
+      rotation: 11,
       title: {
         display: false
       },
