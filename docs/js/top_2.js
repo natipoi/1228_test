@@ -337,6 +337,7 @@ window.onload = function(){
     }
   });
   
+  
   const lineChart1_dataNum = lineChart1.config.data.labels.length
   showCustomPopup(lineChart1_dataNum, lineChart1, "analytics1");
   
