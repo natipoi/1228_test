@@ -96,7 +96,7 @@ window.onload = function(){
     type: 'doughnut',
     data: {
       datasets: [{
-          data: [70, 30],
+          data: [700000, 300000],
           backgroundColor: ['#f8bb45', '#a7e3a2'],
           borderColor: ['#f8bb45', '#a7e3a2'],
         },
@@ -133,7 +133,7 @@ window.onload = function(){
         callbacks: {
           label: function(tooltipItem, data) {
             var num = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString();
-            return num + '％'
+            return num + '円'
           }
         }
       }
@@ -267,7 +267,7 @@ window.onload = function(){
     type: 'doughnut',
     data: {
       datasets: [{
-          data: [70, 30],
+          data: [20000, 5000],
           backgroundColor: ['#f8bb45', '#a7e3a2'],
           borderColor: ['#f8bb45', '#a7e3a2'],
         },
@@ -303,7 +303,7 @@ window.onload = function(){
         borderWidth: 1,
         callbacks: {
           label: function(tooltipItem, data) {
-            return  data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString() + '％'
+            return  data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString()
           }
         }
       }

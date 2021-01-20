@@ -118,7 +118,7 @@ window.onload = function(){
     type: 'doughnut',
     data: {
       datasets: [{
-          data: [70, 30],
+          data: [700000, 300000],
           backgroundColor: ['#f8bb45', '#a7e3a2'],
           borderColor: ['#f8bb45', '#a7e3a2'],
         },
@@ -129,7 +129,7 @@ window.onload = function(){
           hoverBackgroundColor: ['#ffffff']
         },
         {
-          data: [65, 35],
+          data: [600000, 400000],
           backgroundColor: ['#e0d1b5', '#d9e5d8'],
           borderColor: ['#e0d1b5', '#d9e5d8'],
         },
@@ -160,7 +160,7 @@ window.onload = function(){
         callbacks: {
           label: function(tooltipItem, data) {
             var num = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString();
-            return num + '％'
+            return num + '円'
           }
         }
       }
@@ -327,7 +327,7 @@ window.onload = function(){
     type: 'doughnut',
     data: {
       datasets: [{
-          data: [70, 30],
+          data: [20000, 5000],
           backgroundColor: ['#f8bb45', '#a7e3a2'],
           borderColor: ['#f8bb45', '#a7e3a2'],
         },
@@ -338,7 +338,7 @@ window.onload = function(){
           hoverBackgroundColor: ['#ffffff']
         },
         {
-          data: [65, 35],
+          data: [30000, 3000],
           backgroundColor: ['#e0d1b5', '#d9e5d8'],
           borderColor: ['#e0d1b5', '#d9e5d8'],
         },
@@ -368,7 +368,7 @@ window.onload = function(){
         borderWidth: 1,
         callbacks: {
           label: function(tooltipItem, data) {
-            return  data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString() + '％'
+            return  data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString()
           }
         }
       }
@@ -387,6 +387,7 @@ window.onload = function(){
     showCustomPopup(lineChart2_dataNum, lineChart2, "analytics2");
   }
   setData();
+  
   window.addEventListener( 'resize', function() {
     setTimeout(function(){ setData() }, 1000);
   }, true);
